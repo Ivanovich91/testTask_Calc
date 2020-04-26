@@ -29,7 +29,15 @@ public class Main {
                     operation = opp;
                 }
             }
-            System.out.println(operation.calc(new Calculator(firstNumber, secondNumber)));
+
+            int result = operation.calc(new Calculator(firstNumber, secondNumber));
+            if(parser.getCounter() == 2){
+                System.out.println(ArabToRomeConverter.arabToRome(result));
+            } else {
+                System.out.println(operation.calc(new Calculator(firstNumber, secondNumber)));
+            }
+
         }
     }
 }
+
